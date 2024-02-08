@@ -5,9 +5,19 @@ function ProductTable({products}) {
 
 
   return (
-    <div>
-      <ProductRow />
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {products.map((product) => (
+          <ProductRow key={product.id} product={product} />
+        ))}
+      </tbody>
+    </table>
   );
 }
 
