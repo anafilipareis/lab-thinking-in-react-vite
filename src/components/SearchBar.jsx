@@ -1,11 +1,11 @@
 import React from "react";
 
-function SearchBar() {
+function SearchBar({ products, setProducts }) {
 
 
     return (
       <div>
-  
+        <input type="text" placeholder="Search products..." />
       </div>
     );
   }
