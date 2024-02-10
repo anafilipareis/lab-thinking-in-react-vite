@@ -10,17 +10,20 @@ function SearchBar({products, setProducts}) {
   const handleSelect = (e) => { 
   const searchString = e.target.value;
 
+  if (searchString === ""){
+
+    // check if it's empty, reset to the original full list of products
+    setProducts (products);
+  }
+  else {
  // The filter method creates a new array that contains only the products whose names include the search string. 
   const filteredProducts = products.filter( //  Creates a new array (filteredProducts) that includes only the elements for which the specified condition is true
     (product) => product.name.includes(searchString) // It checks whether the name property of each product includes the searchString. The includes method returns true if the string contains the specified substring.
   );
-
   // Update
   setProducts(filteredProducts);
 };
-
-  
-    
+};
 
     return (
       <div>
