@@ -16,12 +16,14 @@ function ProductsPage() {
     marginTop: "20px", 
   };
 
+
+
   return (
     <div style={containerStyle}>
       <h1>IronStore</h1>
-        <SearchBar products={products}  />
+        <SearchBar products={products}  setProducts={setProducts}/>
         <div style={tableContainerStyle}>
-        <ProductTable products={products} setProducts={setProducts}/>
+        <ProductTable products={products} />
         </div>
     </div>
   );
